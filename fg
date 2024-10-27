@@ -1,0 +1,403 @@
+    const canvas = document.getElementById('gameCanvas');
+          ^^^^^^
+SyntaxError: invalid syntax
+>>> const ctx = canvas.getContext('2d');
+  File "<stdin>", line 1
+    const ctx = canvas.getContext('2d');
+          ^^^
+SyntaxError: invalid syntax
+>>> const totalLevels = 3; // Change to 30 for full game
+  File "<stdin>", line 1
+    const totalLevels = 3; // Change to 30 for full game
+          ^^^^^^^^^^^
+SyntaxError: invalid syntax
+>>> let currentLevel = 0;
+  File "<stdin>", line 1
+    let currentLevel = 0;
+        ^^^^^^^^^^^^
+SyntaxError: invalid syntax
+>>> let unlockedLevels = 1;
+  File "<stdin>", line 1
+    let unlockedLevels = 1;
+        ^^^^^^^^^^^^^^
+SyntaxError: invalid syntax
+>>> let player = { x: 50, y: 500, width: 30, height: 30, dy: 0, gravity: 0.5, jumping: false };
+  File "<stdin>", line 1
+    let player = { x: 50, y: 500, width: 30, height: 30, dy: 0, gravity: 0.5, jumping: false };
+        ^^^^^^
+SyntaxError: invalid syntax
+>>> let platforms = [];
+  File "<stdin>", line 1
+    let platforms = [];
+        ^^^^^^^^^
+SyntaxError: invalid syntax
+>>>
+>>> const levelData = [
+  File "<stdin>", line 1
+    const levelData = [
+          ^^^^^^^^^
+SyntaxError: invalid syntax
+>>>     { platforms: [{ x: 0, y: 550, width: 800, height: 50 }] }, // Level 1
+  File "<stdin>", line 1
+    { platforms: [{ x: 0, y: 550, width: 800, height: 50 }] }, // Level 1
+IndentationError: unexpected indent
+>>>     { platforms: [{ x: 0, y: 550, width: 800, height: 50 }, { x: 200, y: 400, width: 100, height: 20 }] }, // Level 2
+  File "<stdin>", line 1
+    { platforms: [{ x: 0, y: 550, width: 800, height: 50 }, { x: 200, y: 400, width: 100, height: 20 }] }, // Level 2
+IndentationError: unexpected indent
+>>>     { platforms: [{ x: 0, y: 550, width: 800, height: 50 }, { x: 150, y: 450, width: 100, height: 20 }, { x: 400, y: 300, width: 150, height: 20 }] } // Level 3
+  File "<stdin>", line 1
+    { platforms: [{ x: 0, y: 550, width: 800, height: 50 }, { x: 150, y: 450, width: 100, height: 20 }, { x: 400, y: 300, width: 150, height: 20 }] } // Level 3
+IndentationError: unexpected indent
+>>> ];
+  File "<stdin>", line 1
+    ];
+    ^
+SyntaxError: unmatched ']'
+>>>
+>>> function showMenu() {
+  File "<stdin>", line 1
+    function showMenu() {
+             ^^^^^^^^
+SyntaxError: invalid syntax
+>>>     const levelButtons = document.getElementById('level-buttons');
+  File "<stdin>", line 1
+    const levelButtons = document.getElementById('level-buttons');
+IndentationError: unexpected indent
+>>>     levelButtons.innerHTML = '';
+  File "<stdin>", line 1
+    levelButtons.innerHTML = '';
+IndentationError: unexpected indent
+>>>
+>>>     for (let i = 0; i < totalLevels; i++) {
+  File "<stdin>", line 1
+    for (let i = 0; i < totalLevels; i++) {
+IndentationError: unexpected indent
+>>>         const button = document.createElement('button');
+  File "<stdin>", line 1
+    const button = document.createElement('button');
+IndentationError: unexpected indent
+>>>         button.innerText = `Level ${i + 1}`;
+
+  File "<stdin>", line 1
+    button.innerText = `Level ${i + 1}`;
+IndentationError: unexpected indent
+>>>         button.disabled = i >= unlockedLevels;
+  File "<stdin>", line 1
+    button.disabled = i >= unlockedLevels;
+IndentationError: unexpected indent
+>>>         button.onclick = () => loadLevel(i);
+
+  File "<stdin>", line 1
+    button.onclick = () => loadLevel(i);
+IndentationError: unexpected indent
+>>>         levelButtons.appendChild(button);
+  File "<stdin>", line 1
+    levelButtons.appendChild(button);
+IndentationError: unexpected indent
+>>>     }
+  File "<stdin>", line 1
+    }
+IndentationError: unexpected indent
+>>> }
+  File "<stdin>", line 1
+    }
+    ^
+SyntaxError: unmatched '}'
+>>>
+>>> function loadLevel(level) {
+  File "<stdin>", line 1
+    function loadLevel(level) {
+             ^^^^^^^^^
+SyntaxError: invalid syntax
+>>>     currentLevel = level;
+  File "<stdin>", line 1
+    currentLevel = level;
+IndentationError: unexpected indent
+>>>     player.y = 500; // Reset player position
+
+  File "<stdin>", line 1
+    player.y = 500; // Reset player position
+IndentationError: unexpected indent
+>>>     canvas.style.display = 'block';
+  File "<stdin>", line 1
+    canvas.style.display = 'block';
+IndentationError: unexpected indent
+>>>     document.getElementById('menu').style.display = 'none';
+  File "<stdin>", line 1
+    document.getElementById('menu').style.display = 'none';
+IndentationError: unexpected indent
+>>>     platforms = levelData[level].platforms;
+  File "<stdin>", line 1
+    platforms = levelData[level].platforms;
+IndentationError: unexpected indent
+>>>     startGame();
+  File "<stdin>", line 1
+    startGame();
+IndentationError: unexpected indent
+>>> }
+  File "<stdin>", line 1
+    }
+    ^
+SyntaxError: unmatched '}'
+>>>
+>>> function startGame() {
+  File "<stdin>", line 1
+    function startGame() {
+             ^^^^^^^^^
+SyntaxError: invalid syntax
+>>>     ctx.clearRect(0, 0, canvas.width, canvas.height);
+  File "<stdin>", line 1
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+IndentationError: unexpected indent
+>>>     requestAnimationFrame(gameLoop);
+  File "<stdin>", line 1
+    requestAnimationFrame(gameLoop);
+IndentationError: unexpected indent
+>>> }
+  File "<stdin>", line 1
+    }
+    ^
+SyntaxError: unmatched '}'
+>>>
+>>> function gameLoop() {
+  File "<stdin>", line 1
+    function gameLoop() {
+             ^^^^^^^^
+SyntaxError: invalid syntax
+>>>     ctx.clearRect(0, 0, canvas.width, canvas.height);
+  File "<stdin>", line 1
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+IndentationError: unexpected indent
+>>>     drawPlatforms();
+  File "<stdin>", line 1
+    drawPlatforms();
+IndentationError: unexpected indent
+>>>     drawPlayer();
+  File "<stdin>", line 1
+    drawPlayer();
+IndentationError: unexpected indent
+>>>     updatePlayer();
+  File "<stdin>", line 1
+    updatePlayer();
+IndentationError: unexpected indent
+>>>     requestAnimationFrame(gameLoop);
+  File "<stdin>", line 1
+    requestAnimationFrame(gameLoop);
+IndentationError: unexpected indent
+>>> }
+  File "<stdin>", line 1
+    }
+    ^
+SyntaxError: unmatched '}'
+>>>
+>>> function drawPlatforms() {
+  File "<stdin>", line 1
+    function drawPlatforms() {
+             ^^^^^^^^^^^^^
+SyntaxError: invalid syntax
+>>>     ctx.fillStyle = 'brown';
+  File "<stdin>", line 1
+    ctx.fillStyle = 'brown';
+IndentationError: unexpected indent
+>>>     platforms.forEach(platform => {
+  File "<stdin>", line 1
+    platforms.forEach(platform => {
+IndentationError: unexpected indent
+>>>         ctx.fillRect(platform.x, platform.y, platform.width, platform.height);
+  File "<stdin>", line 1
+    ctx.fillRect(platform.x, platform.y, platform.width, platform.height);
+IndentationError: unexpected indent
+>>>     });
+  File "<stdin>", line 1
+    });
+IndentationError: unexpected indent
+>>> }
+  File "<stdin>", line 1
+    }
+    ^
+SyntaxError: unmatched '}'
+>>>
+>>> function drawPlayer() {
+  File "<stdin>", line 1
+    function drawPlayer() {
+             ^^^^^^^^^^
+SyntaxError: invalid syntax
+>>>     ctx.fillStyle = 'blue';
+  File "<stdin>", line 1
+    ctx.fillStyle = 'blue';
+IndentationError: unexpected indent
+>>>     ctx.fillRect(player.x, player.y, player.width, player.height);
+  File "<stdin>", line 1
+    ctx.fillRect(player.x, player.y, player.width, player.height);
+IndentationError: unexpected indent
+>>> }
+  File "<stdin>", line 1
+    }
+    ^
+SyntaxError: unmatched '}'
+>>>
+>>> function updatePlayer() {
+  File "<stdin>", line 1
+    function updatePlayer() {
+             ^^^^^^^^^^^^
+SyntaxError: invalid syntax
+>>>     player.y += player.dy;
+  File "<stdin>", line 1
+    player.y += player.dy;
+IndentationError: unexpected indent
+>>>     player.dy += player.gravity;
+  File "<stdin>", line 1
+    player.dy += player.gravity;
+IndentationError: unexpected indent
+>>>
+>>>     if (player.y + player.height >= canvas.height) {
+  File "<stdin>", line 1
+    if (player.y + player.height >= canvas.height) {
+IndentationError: unexpected indent
+>>>         player.y = canvas.height - player.height;
+  File "<stdin>", line 1
+    player.y = canvas.height - player.height;
+IndentationError: unexpected indent
+>>>         player.dy = 0;
+  File "<stdin>", line 1
+    player.dy = 0;
+IndentationError: unexpected indent
+>>>     }
+  File "<stdin>", line 1
+    }
+IndentationError: unexpected indent
+>>>
+>>>     platforms.forEach(platform => {
+  File "<stdin>", line 1
+    platforms.forEach(platform => {
+IndentationError: unexpected indent
+>>>         if (player.x < platform.x + platform.width &&
+  File "<stdin>", line 1
+    if (player.x < platform.x + platform.width &&
+IndentationError: unexpected indent
+>>>             player.x + player.width > platform.x &&
+  File "<stdin>", line 1
+    player.x + player.width > platform.x &&
+IndentationError: unexpected indent
+>>>             player.y + player.height < platform.y + platform.height &&
+  File "<stdin>", line 1
+    player.y + player.height < platform.y + platform.height &&
+IndentationError: unexpected indent
+>>>             player.y + player.height + player.dy >= platform.y) {
+  File "<stdin>", line 1
+    player.y + player.height + player.dy >= platform.y) {
+IndentationError: unexpected indent
+>>>             player.y = platform.y - player.height;
+  File "<stdin>", line 1
+    player.y = platform.y - player.height;
+IndentationError: unexpected indent
+>>>             player.dy = 0;
+  File "<stdin>", line 1
+    player.dy = 0;
+IndentationError: unexpected indent
+>>>         }
+  File "<stdin>", line 1
+    }
+IndentationError: unexpected indent
+>>>     });
+  File "<stdin>", line 1
+    });
+IndentationError: unexpected indent
+>>>
+>>>     if (player.jumping) {
+  File "<stdin>", line 1
+    if (player.jumping) {
+IndentationError: unexpected indent
+>>>         player.dy = -10; // Jump force
+  File "<stdin>", line 1
+    player.dy = -10; // Jump force
+IndentationError: unexpected indent
+>>>         player.jumping = false;
+  File "<stdin>", line 1
+    player.jumping = false;
+IndentationError: unexpected indent
+>>>     }
+  File "<stdin>", line 1
+    }
+IndentationError: unexpected indent
+>>> }
+  File "<stdin>", line 1
+    }
+    ^
+SyntaxError: unmatched '}'
+>>>
+>>> document.addEventListener('keydown', (event) => {
+  File "<stdin>", line 1
+    document.addEventListener('keydown', (event) => {
+                                          ^^^^^^^^
+SyntaxError: expression cannot contain assignment, perhaps you meant "=="?
+>>>     if (event.key === 'ArrowLeft') {
+  File "<stdin>", line 1
+    if (event.key === 'ArrowLeft') {
+IndentationError: unexpected indent
+>>>         player.x -= 5;
+  File "<stdin>", line 1
+    player.x -= 5;
+IndentationError: unexpected indent
+>>>     } else if (event.key === 'ArrowRight') {
+
+  File "<stdin>", line 1
+    } else if (event.key === 'ArrowRight') {
+IndentationError: unexpected indent
+>>>         player.x += 5;
+  File "<stdin>", line 1
+    player.x += 5;
+IndentationError: unexpected indent
+>>>     } else if (event.key === ' ' && player.y >= canvas.height - player.height) {
+  File "<stdin>", line 1
+    } else if (event.key === ' ' && player.y >= canvas.height - player.height) {
+IndentationError: unexpected indent
+>>>         player.jumping = true;
+  File "<stdin>", line 1
+    player.jumping = true;
+IndentationError: unexpected indent
+>>>     }
+  File "<stdin>", line 1
+    }
+IndentationError: unexpected indent
+>>> });
+  File "<stdin>", line 1
+    });
+    ^
+SyntaxError: unmatched '}'
+>>>
+>>> function completeLevel() {
+  File "<stdin>", line 1
+    function completeLevel() {
+             ^^^^^^^^^^^^^
+SyntaxError: invalid syntax
+>>>     unlockedLevels++;
+  File "<stdin>", line 1
+    unlockedLevels++;
+IndentationError: unexpected indent
+>>>     showMenu();
+  File "<stdin>", line 1
+    showMenu();
+IndentationError: unexpected indent
+>>> }
+  File "<stdin>", line 1
+    }
+    ^
+SyntaxError: unmatched '}'
+>>>
+>>> // Show the main menu when the page loads
+  File "<stdin>", line 1
+    // Show the main menu when the page loads
+    ^^
+SyntaxError: invalid syntax
+>>> showMenu();
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'showMenu' is not defined
+>>>
+
+
+
+
+
